@@ -1,0 +1,169 @@
+/* FileShare フロント — GitHub ライクなダークテーマ */
+
+.fileshare-public {
+	--fs-surface: #161b22;
+	--fs-bg: #0d1117;
+	--fs-border: #30363d;
+	--fs-text: #c9d1d9;
+	--fs-muted: #8b949e;
+	--fs-accent: #238636;
+	--fs-accent-hover: #2ea043;
+	--fs-danger: #f85149;
+	display: flex;
+	justify-content: center;
+	padding: 24px 12px;
+}
+
+.fileshare-public__card {
+	width: 100%;
+	max-width: 420px;
+	background: var(--fs-surface);
+	border: 1px solid var(--fs-border);
+	border-radius: 10px;
+	padding: 28px;
+	color: var(--fs-text);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.fileshare-public__title {
+	margin: 0 0 20px;
+	font-size: 20px;
+	color: var(--fs-text);
+	text-align: center;
+}
+
+.fileshare-public__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.fileshare-public__label {
+	font-size: 13px;
+	color: var(--fs-muted);
+	margin: 12px 0 6px;
+}
+
+.fileshare-public__form input {
+	background: var(--fs-bg);
+	border: 1px solid var(--fs-border);
+	border-radius: 6px;
+	color: var(--fs-text);
+	padding: 10px 12px;
+	font-size: 14px;
+}
+.fileshare-public__form input:focus {
+	outline: none;
+	border-color: var(--fs-accent-hover);
+	box-shadow: 0 0 0 2px rgba(46, 160, 67, 0.25);
+}
+
+.fileshare-public__btn {
+	display: inline-block;
+	margin-top: 20px;
+	background: var(--fs-accent);
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 11px 16px;
+	font-size: 15px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.15s;
+}
+.fileshare-public__btn:hover {
+	background: var(--fs-accent-hover);
+	color: #fff;
+}
+
+.fileshare-public__error {
+	background: rgba(248, 81, 73, 0.12);
+	border: 1px solid var(--fs-danger);
+	color: #ffb3ae;
+	border-radius: 6px;
+	padding: 10px 12px;
+	margin-bottom: 16px;
+	font-size: 14px;
+}
+
+.fileshare-public__success {
+	text-align: center;
+}
+.fileshare-public__filename {
+	color: var(--fs-muted);
+	font-size: 14px;
+	margin: 12px 0;
+	word-break: break-all;
+}
+
+/* 成功・お知らせ系メッセージ。 */
+.fileshare-public__note {
+	background: rgba(46, 160, 67, 0.12);
+	border: 1px solid var(--fs-accent);
+	color: #7ee2a8;
+	border-radius: 6px;
+	padding: 10px 12px;
+	margin-bottom: 16px;
+	font-size: 14px;
+}
+
+/* ログインユーザー表示 + ログアウト。 */
+.fileshare-public__userbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 16px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--fs-border);
+}
+.fileshare-public__user {
+	color: var(--fs-muted);
+	font-size: 14px;
+}
+.fileshare-public__logout {
+	margin: 0;
+}
+.fileshare-public__link {
+	background: none;
+	border: none;
+	color: var(--fs-muted);
+	font-size: 13px;
+	cursor: pointer;
+	text-decoration: underline;
+	padding: 0;
+}
+.fileshare-public__link:hover {
+	color: var(--fs-text);
+}
+
+/* アップロード結果ボックス。 */
+.fileshare-public__result {
+	display: flex;
+	flex-direction: column;
+	background: var(--fs-bg);
+	border: 1px solid var(--fs-border);
+	border-radius: 6px;
+	padding: 14px;
+	margin-bottom: 16px;
+}
+.fileshare-public__result input {
+	background: var(--fs-surface);
+	border: 1px solid var(--fs-border);
+	border-radius: 6px;
+	color: var(--fs-text);
+	padding: 9px 11px;
+	font-size: 13px;
+	margin-bottom: 4px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* ファイル/数値入力（アップロードフォーム）。 */
+.fileshare-public__form input[type="file"] {
+	padding: 10px;
+	background: var(--fs-bg);
+	border: 1px dashed var(--fs-border);
+	border-radius: 6px;
+	color: var(--fs-text);
+	font-size: 13px;
+}

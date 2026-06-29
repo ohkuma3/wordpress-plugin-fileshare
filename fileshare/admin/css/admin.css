@@ -1,0 +1,236 @@
+/* FileShare 管理画面 — GitHub ライクなダークテーマ */
+
+.fileshare-wrap {
+	--fs-bg: #0d1117;
+	--fs-surface: #161b22;
+	--fs-border: #30363d;
+	--fs-text: #c9d1d9;
+	--fs-muted: #8b949e;
+	--fs-accent: #238636;
+	--fs-accent-hover: #2ea043;
+	--fs-danger: #f85149;
+	--fs-radius: 8px;
+	color: var(--fs-text);
+	max-width: 1180px;
+}
+
+.fileshare-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: var(--fs-text);
+}
+.fileshare-title .dashicons {
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+}
+
+.fileshare-notice {
+	padding: 12px 16px;
+	border-radius: var(--fs-radius);
+	margin: 12px 0;
+	border: 1px solid var(--fs-border);
+}
+.fileshare-notice--success {
+	background: rgba(35, 134, 54, 0.15);
+	border-color: var(--fs-accent);
+}
+.fileshare-notice--error {
+	background: rgba(248, 81, 73, 0.12);
+	border-color: var(--fs-danger);
+	color: #ffb3ae;
+}
+
+.fileshare-warning {
+	margin: 8px 0 0;
+	font-size: 13px;
+	color: #ffb3ae;
+}
+
+.fileshare-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	margin-top: 16px;
+}
+@media (max-width: 1100px) {
+	.fileshare-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.fileshare-card {
+	background: var(--fs-surface);
+	border: 1px solid var(--fs-border);
+	border-radius: var(--fs-radius);
+	padding: 20px;
+}
+.fileshare-card h2 {
+	color: var(--fs-text);
+	margin-top: 0;
+	border-bottom: 1px solid var(--fs-border);
+	padding-bottom: 12px;
+}
+
+.fileshare-dropzone {
+	position: relative;
+	border: 2px dashed var(--fs-border);
+	border-radius: var(--fs-radius);
+	padding: 32px 20px;
+	text-align: center;
+	transition: border-color 0.15s, background 0.15s;
+	cursor: pointer;
+	background: var(--fs-bg);
+}
+.fileshare-dropzone.is-dragover {
+	border-color: var(--fs-accent-hover);
+	background: rgba(46, 160, 67, 0.08);
+}
+.fileshare-dropzone input[type="file"] {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+.fileshare-drop-hint {
+	font-size: 15px;
+	color: var(--fs-text);
+	margin: 0 0 8px;
+}
+.fileshare-drop-note {
+	color: var(--fs-muted);
+	font-size: 12px;
+	margin: 8px 0 0;
+}
+.fileshare-filelist {
+	list-style: none;
+	margin: 12px 0 0;
+	padding: 0;
+	text-align: left;
+}
+.fileshare-filelist li {
+	background: var(--fs-surface);
+	border: 1px solid var(--fs-border);
+	border-radius: 6px;
+	padding: 6px 10px;
+	margin: 4px 0;
+	font-size: 13px;
+	display: flex;
+	justify-content: space-between;
+}
+.fileshare-filelist li span:last-child {
+	color: var(--fs-muted);
+}
+
+.fileshare-options {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 14px;
+	margin: 18px 0;
+}
+@media (max-width: 600px) {
+	.fileshare-options {
+		grid-template-columns: 1fr;
+	}
+}
+
+.fileshare-field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-bottom: 12px;
+}
+.fileshare-field label {
+	font-size: 13px;
+	color: var(--fs-muted);
+}
+.fileshare-field input {
+	background: var(--fs-bg);
+	border: 1px solid var(--fs-border);
+	border-radius: 6px;
+	color: var(--fs-text);
+	padding: 8px 10px;
+}
+.fileshare-field input:focus {
+	border-color: var(--fs-accent-hover);
+	outline: none;
+	box-shadow: 0 0 0 2px rgba(46, 160, 67, 0.25);
+}
+
+.fileshare-submit.button-primary,
+.button-primary.fileshare-submit {
+	background: var(--fs-accent);
+	border-color: var(--fs-accent);
+	color: #fff;
+}
+.fileshare-submit.button-primary:hover {
+	background: var(--fs-accent-hover);
+	border-color: var(--fs-accent-hover);
+}
+
+.fileshare-copy {
+	display: flex;
+	gap: 8px;
+}
+.fileshare-copy input {
+	flex: 1;
+	background: var(--fs-bg);
+	border: 1px solid var(--fs-border);
+	border-radius: 6px;
+	color: var(--fs-text);
+	padding: 8px 10px;
+	font-family: monospace;
+}
+
+.fileshare-result {
+	border-color: var(--fs-accent);
+}
+
+.fileshare-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 13px;
+}
+.fileshare-table th,
+.fileshare-table td {
+	text-align: left;
+	padding: 10px 8px;
+	border-bottom: 1px solid var(--fs-border);
+}
+.fileshare-table th {
+	color: var(--fs-muted);
+	font-weight: 600;
+}
+.fileshare-table code {
+	background: var(--fs-bg);
+	padding: 2px 6px;
+	border-radius: 4px;
+	color: #79c0ff;
+}
+.fileshare-delete {
+	color: var(--fs-danger) !important;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	background: none;
+	padding: 0;
+}
+.fileshare-empty {
+	color: var(--fs-muted);
+}
+
+.fileshare-status {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 12px;
+	font-size: 12px;
+	background: var(--fs-bg);
+	border: 1px solid var(--fs-border);
+}
+.fileshare-status--success { color: #3fb950; border-color: #238636; }
+.fileshare-status--fail,
+.fileshare-status--blocked,
+.fileshare-status--denied { color: var(--fs-danger); border-color: var(--fs-danger); }
