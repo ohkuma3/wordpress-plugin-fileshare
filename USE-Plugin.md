@@ -1,6 +1,8 @@
 # FileShare 使用方法
 
-最終更新: 2026-06-26 / バージョン: 1.0.0
+最終更新: 2026-07-02 / バージョン: 1.0.1
+
+[プラグインのサイトを表示](https://github.com/ohkuma3/wordpress-plugin-fileshare)
 
 このドキュメントでは、FileShare プラグインの使い方を管理者向け・利用者向けに説明します。
 

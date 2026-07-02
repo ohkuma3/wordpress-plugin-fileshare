@@ -1,6 +1,8 @@
 # FileShare 要件定義書
 
-最終更新: 2026-06-26
+最終更新: 2026-07-02
+
+[プラグインのサイトを表示](https://github.com/ohkuma3/wordpress-plugin-fileshare)
 
 ## 1. 概要
 
